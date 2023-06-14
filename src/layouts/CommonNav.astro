@@ -1,0 +1,31 @@
+---
+const url = Astro.url
+---
+
+{
+  url.pathname !== '/' && (
+    <nav>
+      <a href='/'>Go back to main page</a>
+    </nav>
+  )
+}
+
+<style>
+  nav {
+    background-color: white;
+    padding: 0.5rem 0.5rem;
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #a66fff;
+  }
+</style>
